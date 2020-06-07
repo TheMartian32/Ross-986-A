@@ -3,6 +3,12 @@
 A simple text based python game
 ===============================
 
+Notes:
+
+As of now, prompt user to send message to the ailens or not to do that and simply go to them.
+Find a way to organize this.
+Add comments and doc strings.
+Figure out the plot a bit more.
 
 """
 
@@ -20,6 +26,7 @@ class UserInputs():
                 press_key = input('\n**Press enter to continue** ')
 
     def repeat(self):
+        print('\nThank you for playing.')
         repeat = ''
         while True:
             # * Asks to repeat the script.
@@ -30,8 +37,6 @@ class UserInputs():
                 continue
             if repeat[0] == 'n':
                 break
-
-
 
 
 ui = UserInputs()
@@ -85,14 +90,20 @@ class Game():
         Case if the user decided not to tell the world and it eventually
         got out in a terrible way. Which way? I'm not really sure yet.
         """
-        print('\nThe alien species has interpreted the message sent to them as an act of aggression and is now heading in the direction of Earth with the intention to obliterate humankind.')
+        print('\nThe alien species has interpreted the message sent to them as an act of aggression.')
+        print('\bThey are now heading in the direction of Earth with the intention to obliterate humankind.')
         retaliate = input(
             'Do you wish to retaliate against the aliens?? (y/n): ')
 
         if retaliate[0] == 'y':
             pass
-            #* Note to future self: You choose to retaliate so now the Epsilon is converted into a battle ready warship and 75 others are in the planning with multiple supporting vessels.
-            #* Multiple probes are placed around the solar system as a constant radar with some being sent on an interstellar journey. All probes have a radar range of over 10 lightyears.
+            # * Note to future self: You choose to retaliate so now the Epsilon is converted into a battle ready warship and 75 others are in the planning with multiple supporting vessels.
+            # * Multiple probes are placed around the solar system as a constant radar with some being sent on an interstellar journey. All probes have a radar range of over 10 lightyears.
+        if retaliate[0] == 'n':
+            print('\nMass panic slowly enveloped the world. Everything collapsed.')
+            print('\nWhen the ailens finally got to Earth, 45 years after they were discovered, humankind was already gone.')
+            ui.key()
+            ui.repeat()
 
 
 if __name__ == "__main__":
