@@ -95,25 +95,39 @@ class Game():
             print('This is the end. People only remember you now for your discovery of alien life that led to the partial demise of the world.')
             ui.repeat()
 
-    def world_panic(self):
-        """
-        Case if the user decided not to tell the world and it eventually
-        got out in a terrible way. Which way? I'm not really sure yet.
-        """
-        print('\nThe alien species has interpreted the message sent to them as an act of aggression.')
-        print('\bThey are now heading in the direction of Earth with the intention to obliterate humankind.')
-        retaliate = input(
-            'Do you wish to retaliate against the aliens?? (y/n): ')
+        if abort[0] == 'n':
+            def world_panic():
+                """
+                Case if the user decided not to tell the world and it eventually
+                got out in a terrible way. Which way? I'm not really sure yet.
+                """
+                contact = input(
+                    '\nScientists and civilians are wanting to try and communicate with these ailens. Will you send the message? (Y/N) ')
+                if contact[0] == 'y':
+                    print(
+                        '\nThe alien species has interpreted the message sent to them as an act of aggression.')
+                    print(
+                        '\nThey are now heading in the direction of Earth with the intention to obliterate humankind.')
+                    retaliate = input(
+                        'Do you wish to retaliate against the aliens?? (y/n): ')
 
-        if retaliate[0] == 'y':
-            pass
-            # * Note to future self: You choose to retaliate so now the Epsilon is converted into a battle ready warship and 75 others are in the planning with multiple supporting vessels.
-            # * Multiple probes are placed around the solar system as a constant radar with some being sent on an interstellar journey. All probes have a radar range of over 10 lightyears.
-        if retaliate[0] == 'n':
-            print('\nMass panic slowly enveloped the world. Everything collapsed.')
-            print('\nWhen the ailens finally got to Earth, 45 years after they were discovered, humankind was already gone.')
-            ui.key()
-            ui.repeat()
+                    if retaliate[0] == 'y':
+                        pass
+                        # * Note to future self: You choose to retaliate so now the Epsilon is converted into a battle ready warship and 75 others are in the planning with multiple supporting vessels.
+                        # * Multiple probes are placed around the solar system as a constant radar with some being sent on an interstellar journey. All probes have a radar range of over 10 lightyears.
+                    if retaliate[0] == 'n':
+                        print(
+                            '\nMass panic slowly enveloped the world. Everything collapsed.')
+                        print(
+                            '\nWhen the ailens finally got to Earth, 45 years after they were discovered, humankind was already gone.')
+                        ui.key()
+                        ui.repeat()
+
+                if contact[0] == 'n':
+                    pass
+                    # * continue the rest of the game, not really sure what happens after this.
+
+        world_panic()
 
 
 if __name__ == "__main__":
