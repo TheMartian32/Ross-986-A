@@ -10,6 +10,16 @@ Find a way to organize this.
 Add comments and doc strings.
 Figure out the plot a bit more.
 
+Bugs:
+So far if you choose to repeat the game it doesn't work right.
+This is mainly because in the repeat method in the UserInputs class
+in the if statement to determine if the user wants to repeat the game
+it just replays the start method and stops after all that code has been
+executed.
+
+So future me, set up a method to repeat the game and dynamically adjust to
+whatever the choice the user has made.
+
 """
 
 
