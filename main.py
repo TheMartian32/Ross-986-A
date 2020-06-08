@@ -25,7 +25,7 @@ whatever the choice the user has made.
 
 class UserInputs():
 
-    def key(self):
+    def enter(self):
         press_key = None
         while press_key != '':
             press_key = input('\n**Press enter to continue** ')
@@ -57,7 +57,7 @@ class Game():
     def start(self):
         print('\nYou are an avid astronomer who has found alien life on a distant world. A mere 20 light years away. The year is 2035. ')
         print('\nYou must decide whether to tell the world about it and see how they react or keep it a secret and make sure no one finds out.')
-        ui.key()
+        ui.enter()
 
         keep = input(
             "Keep it to yourself and a select few? Or share it? (y/n) ").lower()
@@ -85,7 +85,7 @@ class Game():
         print('\nBut it has also ignited to a spark to contact these beings and technology is now rapidly advancing.')
         print('\nIt is now the year 2050. With the spark of interest in these beings, it has now evolved into a wildfire of new technology and innovation.')
         print('\nIn 6 months, the humanities first interstellar ship with a range of 45 light years, will be ready for launch. It is called the Epsilon.')
-        ui.key()
+        ui.enter()
 
         abort = input(
             'A rumor spread around the world has ensued with some panic and people are beginning to question the launch of Epsilon. Will you still proceed? (y/n): ')
@@ -93,6 +93,7 @@ class Game():
             print('Very well, you must face consequences. ')
             print('\nThe world is now in mass paninc as they believe talking about these beings will kill them and if they go near the star system, the universe will end.')
             print('This is the end. People only remember you now for your discovery of alien life that led to the partial demise of the world.')
+            ui.enter()
             ui.repeat()
 
         if abort[0] == 'n':
@@ -120,14 +121,20 @@ class Game():
                             '\nMass panic slowly enveloped the world. Everything collapsed.')
                         print(
                             '\nWhen the ailens finally got to Earth, 45 years after they were discovered, humankind was already gone.')
-                        ui.key()
+                        ui.enter()
                         ui.repeat()
 
                 if contact[0] == 'n':
                     pass
+                    print('\nVery well, you must deal with the consequences.')
+
+                    print('\nThe Epsilon is now ready for launch and will be making first contact in the year 2075.')
+                    ui.enter()
+
+                    print('\nIt is now the year 2062. The crew is now halfway through their journey among the stars.')
                     # * continue the rest of the game, not really sure what happens after this.
 
-        world_panic()
+            world_panic()
 
 
 if __name__ == "__main__":
