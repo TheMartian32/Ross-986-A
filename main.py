@@ -11,11 +11,6 @@ Add comments and doc strings.
 Figure out the plot a bit more.
 
 Bugs:
-So far if you choose to repeat the game it doesn't work right.
-This is mainly because in the repeat method in the UserInputs class
-in the if statement to determine if the user wants to repeat the game
-it just replays the start method and stops after all that code has been
-executed.
 
 So future me, set up a method to repeat the game and dynamically adjust to
 whatever the choice the user has made.
@@ -44,6 +39,7 @@ class UserInputs():
                 '\nWould you like to repeat the game? (Y/N): ').lower()
             if repeat[0] == 'y':
                 g.start()
+                g.middle()
                 continue
             if repeat[0] == 'n':
                 break
@@ -114,6 +110,20 @@ class Game():
 
                     if retaliate[0] == 'y':
                         pass
+                        print('\nThe Epsilon is now converted into a warship and 75 smaller ships are now under construction.')
+                        print('Hundreds of probes are launched and placed around the solar system as long range radar. They have a range of over 15 light years.')
+                        print('\nOrbital shipyards are placed around Mars, Jupiter, Saturn, and Pluto.')
+
+                        evac = input('Do you want to Evacuate Earth and colonies throughout the solar system to a nearby star system, Alpha Centauri? (Y/N): ').lower()
+                        if evac[0] == 'y':
+                            print('Evacuations have begun, in 10 years 80% of Humanity will be approaching Alpha Centauri.')
+                            ui.enter()
+
+                            print('\nThe remaining 20% of Humanity will stay behind to build the ships and protect the Solar System.')
+                            #* Continue the story after this, maybe have something happen like discovering more ailens or an early attack.
+                            ui.enter()
+
+
                         # * Note to future self: You choose to retaliate so now the Epsilon is converted into a battle ready warship and 75 others are in the planning with multiple supporting vessels.
                         # * Multiple probes are placed around the solar system as a constant radar with some being sent on an interstellar journey. All probes have a radar range of over 10 lightyears.
                     if retaliate[0] == 'n':
@@ -129,6 +139,9 @@ class Game():
                     print('\nVery well, you must deal with the consequences.')
 
                     print('\nThe Epsilon is now ready for launch and will be making first contact in the year 2075.')
+                    ui.enter()
+
+                    print('The Epsilon has now launched.')
                     ui.enter()
 
                     print('\nIt is now the year 2062. The crew is now halfway through their journey among the stars.')
