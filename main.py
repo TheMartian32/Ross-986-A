@@ -34,7 +34,9 @@ class UserInputs():
                 press_key = input('\n**Press enter to continue** ')
 
     def repeat(self):
-        print('\nThank you for playing.')
+        print('----------------------')
+        print('Thank you for playing.')
+        print('----------------------')
         repeat = ''
         while True:
             # * Asks to repeat the script.
@@ -62,6 +64,7 @@ def main():
         "Keep it to yourself and a select few? Or share it? (y/n) ").lower()
     if keep[0] == 'y':
         print('\nVery well.')
+        ui.repeat()
 
     elif keep[0] == 'n':
         print('\nVery well.')
@@ -151,22 +154,28 @@ def main():
                                         # * Start running out of money here
 
                                     if spend_money[0] == 'n':
-                                        print('The Earth is hit by a few medium sized comets ranging in size from 5 to 12 meters.')
-                                        print('\nThe 12 meter comet impacted a critical manufacturing site for the rockets responsible for orbital construction.')
-
-
+                                        print(
+                                            'The Earth is hit by a few medium sized comets ranging in size from 5 to 12 meters.')
+                                        print(
+                                            '\nThe 12 meter comet impacted a critical manufacturing site for the rockets responsible for orbital construction.')
 
                                 if destroy_comets[0] == 'm':
                                     silence_people = input(
-                                        'Online, multiple people are spreading rumors that the comets heading towards the Earth will destory everything. Will you silence them? (Y/N): ').lower()
+                                        'Online, multiple people are spreading rumors that the comets heading towards the Earth are 100m wide and will destory everything. Will you silence them? (Y/N): ').lower()
                                     if silence_people[0] == 'n':
-                                        print('\nEven though these people online are spreading rumors, they quickly lose popularity as the newest observations show that the comets are between 5m-12m.')
+                                        print(
+                                            '\nEven though these people online are spreading rumors, they quickly lose popularity as the newest observations show that the comets are between 5m-12m.')
                                     if silence_people[0] == 'y':
-                                        print('\nYou realize that the majority of these people live in the US. You cant take away their right to free speech.')
+                                        print(
+                                            '\nYou realize that the majority of these people live in the US. You cant take away their right to free speech.')
                                         ui.enter()
-                                        print('People view this as a reinforcement of their false beliefs.')
-                                        print('More panic spreads among people everywhere.')
-                                        #* just do more stuff after this.
+                                        print(
+                                            '\nPeople view this as a reinforcement of their false beliefs.')
+                                        print(
+                                            'More panic spreads among people everywhere.')
+                                        # * just do more stuff after this.
+                                        ui.enter()
+
 
                         if retaliate[0] == 'n':
                             print(
