@@ -135,6 +135,38 @@ def main():
                                     '\nThe remaining 20% of Humanity will stay behind to build the ships and protect the Solar System.')
                                 # * Continue the story after this, maybe have something happen like discovering more ailens or an early attack.
                                 ui.enter()
+                                print(
+                                    '\nThe ailens sent some sort of probe in the direction of Earth that has immense gravity, that of a large gas giant.')
+                                print(
+                                    '\nThis probe has caused large amounts of comets in the oort cloud to head towards the inner solar system.')
+                                ui.enter()
+
+                                destroy_comets = input(
+                                    'Do you want to destroy the comets? Or hope it misses Earth? (D/M): ').lower()
+                                if destroy_comets[0] == 'd':
+                                    spend_money = input(
+                                        'The plan to destory the comets is around 17 billion dollars. Will you still proceed? (Y/N): ').lower()
+                                    if spend_money[0] == 'y':
+                                        pass
+                                        # * Start running out of money here
+
+                                    if spend_money[0] == 'n':
+                                        print('The Earth is hit by a few medium sized comets ranging in size from 5 to 12 meters.')
+                                        print('\nThe 12 meter comet impacted a critical manufacturing site for the rockets responsible for orbital construction.')
+
+
+
+                                if destroy_comets[0] == 'm':
+                                    silence_people = input(
+                                        'Online, multiple people are spreading rumors that the comets heading towards the Earth will destory everything. Will you silence them? (Y/N): ').lower()
+                                    if silence_people[0] == 'n':
+                                        print('\nEven though these people online are spreading rumors, they quickly lose popularity as the newest observations show that the comets are between 5m-12m.')
+                                    if silence_people[0] == 'y':
+                                        print('\nYou realize that the majority of these people live in the US. You cant take away their right to free speech.')
+                                        ui.enter()
+                                        print('People view this as a reinforcement of their false beliefs.')
+                                        print('More panic spreads among people everywhere.')
+                                        #* just do more stuff after this.
 
                         if retaliate[0] == 'n':
                             print(
