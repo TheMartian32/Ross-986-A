@@ -5,15 +5,12 @@ A simple text based python game
 
 Notes:
 
-As of now, prompt user to send message to the ailens or not to do that and simply go to them.
-Find a way to organize this.
-Add comments and doc strings.
-Figure out the plot a bit more.
+
 
 Bugs:
 
-So future me, set up a method to repeat the game and dynamically adjust to
-whatever the choice the user has made.
+No bugs I'm currently aware of
+as of the latest commit.
 
 """
 
@@ -175,7 +172,6 @@ def main():
                                             'More panic spreads among people everywhere.')
                                         # * just do more stuff after this.
                                         ui.enter()
-
 
                         if retaliate[0] == 'n':
                             print(
